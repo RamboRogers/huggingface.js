@@ -341,6 +341,18 @@ export const LOCAL_APPS = {
 			(model.pipeline_tag === "text-generation" || model.pipeline_tag === "image-text-to-text"),
 		snippet: snippetVllm,
 	},
+	"mlx-gui": {
+	prettyLabel: "MLX-GUI",
+	docsUrl: "https://github.com/RamboRogers/mlx-gui",
+	mainTask: "text-generation",
+	displayOnModelPage: (model: ModelData) =>
+		model.library_name === "mlx" && 
+		(model.pipeline_tag === "text-generation" || 
+		 model.pipeline_tag === "image-text-to-text" ||
+		 model.pipeline_tag === "automatic-speech-recognition" ||
+		 model.pipeline_tag === "feature-extraction"),
+	snippet: snippetMlxGui,
+        },
 	"mlx-lm": {
 		prettyLabel: "MLX LM",
 		docsUrl: "https://github.com/ml-explore/mlx-lm",
